@@ -1,0 +1,40 @@
+// Writing Data to an Excel File in a Specific Column
+
+public boolean SetCellData(String SheetName, String ColName, int RowNum, String Value)
+{
+	int ColNum=-1;
+	Sheet= workbook.getSheet(SheetName);
+	
+	row= Sheet.getRow(0);
+	for(i=0;i<row.getLastCellNum();i++)
+	{
+		if(row.getCell(i).getStringCellValue().trim().equals(ColName))
+		{
+			ColNum=i;
+		}	
+		
+	}
+	row=Sheet.getRow(rowNum-1);
+	if(row==null)
+		row=Sheet.createRow(RowNum-1);
+	
+	cell=row.getCell(ColNum);
+	
+	if(cell== null)	
+		cell = row.createCell(ColNum);
+	
+	cell.setCellValue(Value);
+	
+	fos=new FileOutputStream(xlFilePath);
+	workbook.write(fos);
+	fos.close();
+	
+	catch(Exception ex)
+	{
+		ex.printStackTrace();
+		return false;		
+	}
+	return true;
+}
+
+// YouTube Link - https://www.youtube.com/watch?v=tmWrTtlq7CM
