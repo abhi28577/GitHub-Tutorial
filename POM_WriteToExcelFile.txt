@@ -2,7 +2,11 @@
 
 public boolean SetCellData(String SheetName, String ColName, int RowNum, String Value)
 {
-	FileInputStream file= new FileInputStream(Excel FilePath);	
+	FileInputStream InputFile= new FileInputStream(Excel FilePath);
+	FileOutputStream OutputFile=null;
+	XSSFWorkbook workbook = new XSSFWorkbook(InputFile);
+	XSSFRow row=null;
+	XSSFCell cell=null;
 	
 	int ColNum=-1;
 	Sheet= workbook.getSheet(SheetName);
