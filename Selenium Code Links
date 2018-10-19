@@ -21,7 +21,14 @@ https://www.guru99.com/upload-download-file-selenium-webdriver.html
 7. Excel Read/Write - 
 https://github.com/Santhosh-Naik/Sample_Project/blob/master/src/test/java/Demo/Read_Write_Excel.java
 
-8. Runnung Tests in Parallel
+8. Running Tests in Parallel
 https://github.com/cbeust/testng/issues/1686
 https://www.seleniumeasy.com/testng-tutorials/preserve-order-in-testng
 https://www.seleniumeasy.com/selenium-tutorials/testing-in-multiple-browsers
+
+Thread-Local Safe - 
+https://www.swtestacademy.com/selenium-parallel-tests-grid-testng/
+https://stackoverflow.com/questions/48093802/parallel-execution-in-testng-using-maven/48540404#48540404
+http://seleniumautomationhelper.blogspot.com/2014/02/initializing-webdriver-object-as-thread.html
+
+
